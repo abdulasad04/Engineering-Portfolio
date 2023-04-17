@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes frame {
+                0%{
+                    transform:scale(.9);
+                    opacity:0;
+                    width:100%;
+                }
+                20%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                80%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            .container{
+                width: 100%;
+                margin: 0 auto;
+            }
+            header{
+                background:#d9988c;
+            }
+            nav{
+                float: center;
+            }
+            header::after{
+                content:'';
+                display:table;
+                clear: both;
+            }
+            nav ul{
+                margin: 0;
+                padding: 0;
+                list-style:none;
+            }
+            nav li{
+                display: inline-block;
+                margin-left: 70px;
+                padding-top:25px;
+                padding-bottom: 10px;
+            }
+            nav ul li a {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            nav ul li p {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            body{
+                background:linear-gradient(to left top, #d0be94, #66a7f8, #383c71);
+                background-attachment: fixed;        
+            }
+            section{
+                position:relative;
+                width: 100%;
+                height:100vh;
+                padding:0;
+            }
+            section img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .row img{
+                width:100%;
+                height:500px;
+            }
+            .row {
+                display: flex;
+            }
+
+            .column {
+                flex: 5%;
+                padding: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            h1, h2, h3{
+                color:#ffffff;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .center{
+                display:block;
+                width:100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                float:"center";
+            }
+            .frame{
+                animation:frame 5s linear;
+                width:100%;
+
+            }
+            p {
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ffffff;
+                font-size:large;
+            }
+            .list{
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ffffff;
+                font-size:large;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class = "container">
+                <nav>
+                    <ul>
+                        <li style="max-width:10%;"><img src="rocket.png" style="width: 130%; margin-bottom: -40%; float:right; margin-top: -20%;"><a href = "#"><p style="margin-top: 0; text-align: center;">Pendulum Lab</p></a></li>
+                        <li><a href = "homepage.html">Home</a></li>
+                        <li><a href = "portfolio.html">Position in Context</a></li>
+                        <li><a href = "seatclamp.html">Seat Clamp</a></li>
+                        <li><a href = "civbridge.html">Civ Bridge</a></li>
+                        <li><a href = "thermaltool.html">Thermal Tool</a></li>
+                        <li><a href = "TheShrunkenHouse.html">Shrunken House</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+            <h1>Initial Construction Process</h1>
+            <p>
+                For my first year introductory Physics course, I had to build a pendulum and experiment with the 
+                period and how it was affected by the length of the string attached to the pendulum. To perform this 
+                experiment I needed a pendulum that could change length and would reduce unvertainty as much as 
+                possible. With these as my basic requirements I went on to brainstorming different designs, shown on 
+                the left (insert picture). The construction process for this prototype is shown in Figures 2 and 3.
+            </p>
+            <div class="row">
+                <div class="column">
+                    <img src="pendulum_diverging.jpg" class = "center, frame">
+                    <p style="text-align: center;">Figure 1: Initial Diverging Process of the Pendulum</p>
+                </div>
+                <div class="column">
+                    <img src="initialconstructionprocess.jpg" class="center, frame">
+                    <p style="text-align: center;">Figure 2: Cutting up the Pieces of Cardboard</p>
+                </div>
+                <div class="column">
+                    <img src="initialsetup.jpg" class="center, frame">
+                    <p style="text-align: center;">Figure 3: Initial Set up of the Pendulum</p>
+                </div>
+              </div>
+            <h1>Refining the Design</h1>
+            <p>
+                After the initial design I realized that I had to go back and refine the frame to address to
+                major issues:
+            </p>
+                <ol>
+                    <li class ="list">The lack of adjustability of the string</li>
+                    <li class = "list">The eliptical motion of the pendulum as I let it go</li>
+                </ol>
+                <p>
+                    Firstly, the length of the string was very hard to adjust as it was taped to the top of the 
+                    pendulum and removing the tape was tedious and would also require me to change the tape once it
+                    lost its stickiness. So I decided to reiterate the design with a mechanism on the top of the frame
+                    of the pendulum which is shown in the video. This made ajustments much faster. I also added a ramps
+                    with a dashed line along the ramp to help me align where the pendulum was let go. This took away a degree
+                    of freedom that the pendulum had when I was simply letting go of it with my hand, which reduced uncertainty.
+                    The ramp is shown in the Figure 4. 
+                </p>
+                
+            <div class="row">
+                <div class="column">
+                    <video width="640" height="360" controls>
+                        <source src="stringadjustmentmechanism.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="column">
+                    <img src="rampsadded.jpg" class="center, frame">      
+                    <p style="text-align: center;">Figure 4: Final Pendulum Design</p>              
+                </div>               
+              </div>
+    </body>
+</html>

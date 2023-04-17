@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Engineering Design Portfolio
+        </title>
+        
+        <style>
+            @keyframes powder {
+                from {color: powderblue;}
+                to {color: rgb(0, 255, 132);}
+            }
+            @keyframes gold {
+                from {color: gold;}
+                to {color: rgb(219, 114, 75);}
+            }
+            @keyframes green {
+                from {color: rgb(43, 206, 48);}
+                to {color: rgb(44, 217, 177);}
+            }
+            @keyframes redcycle {
+                from {color: rgb(155, 65, 83);}
+                to {color: rgb(155, 65, 142);}
+            }
+            @keyframes frame {
+                0%{
+                    transform:scale(.9);
+                    opacity:0;
+                    width:100%;
+                }
+                20%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                80%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            .frame{
+                animation:frame 5s linear;
+                width:100%;
+
+            }
+
+            p {
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            h1 {
+                text-align: center;
+            }
+            h1, h2, h3{
+                color:#ffffff;
+                font-family:'Courier New', Courier, monospace;
+            }
+
+            body{
+                background:linear-gradient(to left top, #E5D3B3, #D2B48C, #B99976, #987554, #664429);
+                background-attachment: fixed;        
+            }
+            .container{
+                width: 100%;
+                margin: 0 auto;
+            }
+            header{
+                background:#D2B48C;
+            }
+            nav{
+                float: center;
+            }
+            header::after{
+                content:'';
+                display:table;
+                clear: both;
+            }
+            nav ul{
+                margin: 0;
+                padding: 0;
+                list-style:none;
+            }
+            nav li{
+                display: inline-block;
+                margin-left: 70px;
+                padding-top:25px;
+                padding-bottom: 10px;
+            }
+            nav ul li a {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            nav ul li p {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            div.par{
+                text-indent:30px;
+                margin-right:50px;
+
+            }
+            .center{
+                display:block;
+                width:100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                float:"left";
+            }
+            .img-with-text {
+                text-align: justify;
+                 width: 30%;
+            }
+
+            .img-with-text img {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class = "container">
+                <nav>
+                    <ul>
+                        <li style="max-width:10%;"><img src="rocket.png" style="width: 130%; margin-bottom: -40%; float:right; margin-top: -20%;"><a href = "#"><p style="margin-top: 0; text-align: center;">Position in Context</p></a></li>
+                        <li><a href = "homepage.html">Home</a></li>
+                        <li><a href = "seatclamp.html">Seat Clamp</a></li>
+                        <li><a href = "PendulumLab.html">Pendulum Lab</a></li>
+                        <li><a href = "civbridge.html">Civ Bridge</a></li>
+                        <li><a href = "thermaltool.html">Thermal Tool</a></li>
+                        <li><a href = "TheShrunkenHouse.html">Shrunken House</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <h1>
+            Abdul Asad's Engineering Design Portfolio
+        </h1>
+        <h2 style="margin: 10px;">My Position in Context:</h2>
+        <div class="par">
+            <table>
+                <tr>
+                    <th align="justify">
+                        <h3 style="font-size: 15px; padding:10px;">    Before we dive into the engineering design work I've done this 
+                            school year, I would first like to comment on my position as an engineering design student 
+                            and how that shapes the way I approach design problems. I believe that Engineering Design 
+                            is an iterative process that involves working with stakeholders to 
+                            <span style = "color:powderblue; animation-name: powder; animation-duration: 4s; animation-iteration-count: infinite; animation-direction: alternate;">frame</span> the opportunity. This involves creating a 
+                            requirements model with approprite objectives, metrics, criteria, and constraints. This also 
+                            requires you to <span style = "color:gold; animation-name: gold; animation-duration: 4s; animation-iteration-count: infinite; animation-direction: alternate;">diverge</span> to find various solutions to the
+                            proposed design opportunity and also <span style = "color:greenyellow; animation-name: green; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;">converge</span> to 
+                            limit the number of design candidates. The diverging and converging process should go on in 
+                            cycles, and may also include framing if the current set of requirements are not specific enough
+                            to properly assess all the design candidates. Finally, throughout this entire engineering design
+                            process you should <span style = "color:rgb(155, 65, 83); animation-name: redcycle; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;">represent</span> your ideas through tables,
+                            prototypes, graphs, and any other possible means. 
+                        </h3>
+                    </th>
+                    <th>
+                        <img src="UTIASWorksession.JPG" class="center, frame">
+                    </th>     
+                </tr>            
+            </table>
+        </div>
+
+
+        <div class="par">
+            <table>
+                <tr>
+                    <th align="justify">
+                        <h3 style="font-size: 15px;padding:10px;">
+                            An important value that I hold as an engineering design student is pursuing challenges that
+                            allow me to learn new skills and tools. I really enjoy building and designing things with 
+                            tools that I had no idea how to use previous, this could be machinery or even new software.
+                            This is exemplified throughout my engineering design work as I am always looking for new 
+                            tools that could be used to help open up the design opportunity. I believe that doing this 
+                            is the best way to become more comfortable with these new tools and allows me to be a more
+                            flexible engineering designer. Another value I hold is efficiency in a design. I've defined
+                            efficiency as how long it takes for the design to properly perform and finish its function. 
+                            This is evident through my design work because even when I have a fully functioning product, 
+                            I continue to work on the design to make it more efficient by looking at certain design 
+                            decisions I have made and looking to see if there are better ways to implement them.
+                        </h3>
+                    </th>
+                    <th>
+                        <img src="Praxis1Team.JPG" class="center, frame">
+                    </th>
+                </tr>            
+            </table>
+        </div>
+
+
+        <div class="par">
+            <table>
+                <h3 style="font-size: 15px;">
+                    One major bias I have in my design work is looking for solutions that are too complicated.
+                    This hurts me a lot when I try to implement the design. The reason I have this bias is 
+                    because now that I am in university, I have the feeling that I can now become the engineer
+                    that I have always dreamed I would be. In reality, I'll never be able to build whatever I 
+                    want and exactly how I want it, unlike the engineer I thought I could be in my dreams. The 
+                    truth is simply that engineering is all about compromise and that no matter how good of an
+                    idea you have, you must be ready to compromise with the real world. Many of my engineering
+                    design projects start out as these massive ideas, but then have to get scaled down due to
+                    various constraints, which is something I need to learn to overcome so that I can become
+                    a more practical engineering designer.
+                </h3>
+            </table>
+        </div>
+
+
+        <div class="par">
+            <table>
+                <h3 style="font-size: 15px;">
+                    One of my strongest skills is my perserverence. When I start a design project I stick with it
+                    until I am at least able to have some sort of final product. However, this can also be one 
+                    of my biggest weaknesses becasue I can waste a lot of time on an opportunity that I may not 
+                    have the proper tools to address. Another one of my skills is that I like to think outside of
+                    the box and pitch design ideas that seem out of scope. I like to do this because it hepls question
+                    the design space and even if the particular design I am pitching does not get accepted, it could
+                    still be used to help build on something better. 
+                </h3>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

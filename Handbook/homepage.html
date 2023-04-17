@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            .parallax {
+                background-image: url("rocket.PNG");
+                height: 1500%;
+                background-attachment: fixed;
+                background-position:center;
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+            section{
+                position:relative;
+                top:-18%;
+                width: 100%;
+                height:100vh;
+                padding:0;
+            }
+            section img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height:140%;
+                width:100%;
+            }
+            body{
+                background-image:url("rocket_bg.PNG"), linear-gradient(#131862, #b1b3d2);
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+                background-color: #b1b3d2;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        
+        <section style="margin:0,auto">
+            <img src="rocket.png" id="rocket">
+        </section>
+        <script>
+            let rocket = document.getElementById('rocket');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                rocket.style.top=value*0.33+'px';
+            })
+        </script>
+        <h1 style="text-align: center; color: rgb(0, 136, 255); font-size: 50px;">Explore Your Planet</h1>
+
+        <table style="padding-top:40px; margin-left:auto; margin-right:auto; color:aliceblue; font-size: 25px; font-family:'Courier New', Courier, monospace;">
+            <tr style="margin:5%;"></tr>
+            <tr>
+                <th style="margin: 2000%, 2000%;">
+                    My Position in Context
+                    <a href="portfolio.html"><img src="brown.png" style="width:100%"></a>
+                </th>
+                <th>
+                    Seat Clamp
+                    <a href="seatclamp.html"><img src="cluster.png" style="width:100%"></a>
+                </th>
+                <th>
+                    Pendulum Lab
+                    <a href="PendulumLab.html"><img src="mercury.png" style="width:100%"></a>    
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Civ Bridge
+                    <a href="civbridge.html"><img src="png-image.png" style="width:100%"></a>
+                </th>
+                <th>
+                    Thermal Tool
+                    <a href="thermaltool.html">
+                        <img src="fireplanet.png" style="width:74%">
+                    </a>
+                </th>
+                <th>
+                    The Shrunken House
+                    <a href="TheShrunkenHouse.html">
+                        <img src="colorfulplanet.png" style="width:90%">
+                    </a>
+                </th>
+            </tr>
+        </table>
+
+    </body>
+</html>

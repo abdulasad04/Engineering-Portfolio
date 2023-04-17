@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes frame {
+                0%{
+                    transform:scale(.9);
+                    opacity:0;
+                    width:100%;
+                }
+                20%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                80%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            .container{
+                width: 100%;
+                margin: 0 auto;
+            }
+            header{
+                background:#d9988c;
+            }
+            nav{
+                float: center;
+            }
+            header::after{
+                content:'';
+                display:table;
+                clear: both;
+            }
+            nav ul{
+                margin: 0;
+                padding: 0;
+                list-style:none;
+            }
+            nav li{
+                display: inline-block;
+                margin-left: 70px;
+                padding-top:25px;
+                padding-bottom: 10px;
+            }
+            nav ul li a {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            nav ul li p {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            body{
+                background:linear-gradient(to left top, #f9931f, #e73409, #680b04);
+                background-attachment: fixed;        
+            }
+            section{
+                position:relative;
+                width: 100%;
+                height:100vh;
+                padding:0;
+            }
+            section img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .row img{
+                width:100%;
+                height:400px;
+            }
+            .row {
+                display: flex;
+            }
+
+            .column {
+                flex: 5%;
+                padding: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            h1, h2, h3{
+                color:#ffffff;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .center{
+                display:block;
+                width:100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                float:"left";
+            }
+            .frame{
+                animation:frame 5s linear;
+                width:100%;
+
+            }
+            p {
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ffffff;
+                font-size:large;
+            }            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class = "container">
+                <nav>
+                    <ul>
+                        <li style="max-width:10%;"><img src="rocket.png" style="width: 130%; margin-bottom: -40%; float:right; margin-top: -20%;"><a href = "#"><p style="margin-top: 0; text-align: center;">Thermal Tool</p></a></li>
+                        <li><a href = "homepage.html">Home</a></li>
+                        <li><a href = "portfolio.html">Position in Context</a></li>
+                        <li><a href = "PendulumLab.html">Pendulum Lab</a></li>
+                        <li><a href = "civbridge.html">Civ Bridge</a></li>
+                        <li><a href = "seatclamp.html">Seat Clamp</a></li>
+                        <li><a href = "TheShrunkenHouse.html">Shrunken House</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <h1>Calculations/Research</h1>
+        <p>When of my first big projects when I was working with my design team, UTAT, was creating a tool that 
+            could be used to graph the temperature distriburion of a nose cone given the dimensions of the nose
+            cone. To start I had to do some research on equations that I could use to model the temperature 
+            distribution across the nose cone. I also had to discretize these equations. Parts of my 
+            discretization is shown in Figure 1. I also wrote a psuedo code, which acted as a prototype 
+            to what the actual code would be, also shown in the first picture. The equations that I had to use to 
+            for my code, as well as a brief explanation of how to use the code is shown in Figure 2 and 3 respectively.
+            The figures also act as a link to the github readme where my code is located and also where I wrote the complete 
+            explanation to how my code works. 
+        </p>
+            <div class="row">
+                <div class="column">
+                    <img src="IMG_9906.jpg" class="center, frame" style="height: auto;">
+                    <p style="text-align: center;">Figure 1: Discretization and Prototype of the Code</p>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/UTATRocketry/Nose-Cone-Thermal-Tool">
+                        <img src="math.PNG" class="center, frame" style="height: auto;">
+                    </a>
+                    <p style="text-align: center;">Figure 2: Formulas Used To Find the Temperature Distribution</p>
+                    <a href="https://github.com/UTATRocketry/Nose-Cone-Thermal-Tool">
+                        <img src="math3.PNG" class="center, frame" style="height: auto;">
+                    </a>
+                    <p style="text-align: center;">Figure 3: Brief Explanation of the Code</p>
+                    
+                </div>               
+              </div>
+            <h1>Graphs of Heat Flux and Temperature Distribution of the Nose Cone</h1>
+            <p>
+                Since this was my first time making something like this, I had to make sure it made sense. To do so I plotted 
+                the data that the code outputted for the temperature distribution across the nose cone as well as the heat flux 
+                experienced by the nose cone over time. The heat flux rises sharply as the rocket reaches motor burnout, as shown 
+                in Figure 4. This is what I expected to happen from research. The temperature at the tip of the nose cone is also 
+                much higher than the temperature at the ends of the nose cone, as shown in Figure 5, which was also expected. 
+            </p>
+            <div class="row">
+                <div class="column">
+                    <img src="heat flux.PNG" class="center, frame">
+                    <p style="text-align: center;">Figure 4: Graph of Heat Flux Versus Time</p>                    
+                </div>
+                <div class="column">
+                    <img src="heat_distribution.PNG" class="center, frame">
+                    <p style="text-align: center;">Figure 5: Graph of the Temperature Distribution Across the Nose Cone</p>
+                </div>
+              </div>            
+    </body>
+</html>

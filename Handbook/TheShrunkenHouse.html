@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes frame {
+                0%{
+                    transform:scale(.9);
+                    opacity:0;
+                    width:100%;
+                }
+                20%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                80%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            .container{
+                width: 100%;
+                margin: 0 auto;
+            }
+            header{
+                background:#d9988c;
+            }
+            nav{
+                float: center;
+            }
+            header::after{
+                content:'';
+                display:table;
+                clear: both;
+            }
+            nav ul{
+                margin: 0;
+                padding: 0;
+                list-style:none;
+            }
+            nav li{
+                display: inline-block;
+                margin-left: 70px;
+                padding-top:25px;
+                padding-bottom: 10px;
+            }
+            nav ul li a {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            nav ul li p {
+                color:#ffffff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: cursive;
+            }
+            body{
+                background:linear-gradient(to left top, #d2b2a5, #7f7f9c, #88abbb, #3d60a7);
+                background-attachment: fixed;        
+            }
+            section{
+                position:relative;
+                width: 100%;
+                height:100vh;
+                padding:0;
+            }
+            section img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .row img{
+                width:100%;
+                height:400px;
+            }
+            .row {
+                display: flex;
+            }
+
+            .column {
+                flex: 5%;
+                padding: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            h1, h2, h3{
+                color:#ffffff;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .center{
+                display:block;
+                width:100%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                float:"left";
+            }
+            .frame{
+                animation:frame 5s linear;
+                width:100%;
+
+            }
+            p {
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ffffff;
+                font-size:large;
+            }            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class = "container" style="font-size: 15px;">
+                <nav>
+                    <ul>
+                        <li style="max-width:10%;"><img src="rocket.png" style="width: 130%; margin-bottom: -40%; float:right; margin-top: -20%;"><a href = "TheShrunkenHouse.html"><p style="margin-top: 0; text-align: center; font-size: 15px;">Shrunken House</p></a></li>
+                        <li><a href = "thermaltool.html">Thermal Tool</a></li>
+                        <li><a href = "homepage.html">Home</a></li>
+                        <li><a href = "portfolio.html">Position in Context</a></li>
+                        <li><a href = "PendulumLab.html">Pendulum Lab</a></li>
+                        <li><a href = "civbridge.html">Civ Bridge</a></li>
+                        <li><a href = "seatclamp.html">Seat Clamp</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <h1>Initial Planning Process</h1>
+        <p>
+            For a design course called praxis, me and my team were tasked with designing a solution to help 
+            blind curlers play without help from their coaches or teammates. Initially we had to rescope as the 
+            design space felt too broad. We decided to focus on mapping the house where all the curling rocks are.
+            First we started brainstorming ideas and tried to draw down as many as we could think of as a team, 
+            which is shown in Figure 1. One of our solutions was a miniture house with solenoids that would go up 
+            and down depending on whether or not there was a solenoid there. This allowed the stakeholders to feel 
+            out the orientation of the rocks in the house. Before starting to prototype this design, we found a 
+            reference design that controlled solenoids using an arduino, the circuit diagram of this is shown in 
+            Figure 2. 
+        </p>
+            <div class="row">
+                <div class="column">
+                    <img src="otherdivergingCurling.jpg" class="center, frame">
+                    <p style="text-align: center;">Figure 1: Initial Brainstorming Process</p>
+                </div>
+                <div class="column">
+                    <img src="arduino.PNG" class="center, frame">
+                    <p style="text-align: center;">Figure 2: Circuit Diagram of Reference Design</p>
+                </div>               
+              </div>
+            <h1>Prototyping the Design</h1>
+            <p>
+                Once we came up with the idea of the shrunken house we began prototyping. Inititally, we started 
+                small scale and tried to find a way to get just one solenoid to go up and down. This was more 
+                difficult than expected as an arduino can only supply 5V of electricity, but the solenoid needed 
+                9V. Because of this, we had to use a power supply to power the solenoid and a transistor to control 
+                the solenoid. A video of the initial workings of the solenoid is shown in Figure 3. After that, we 
+                began building our first prototype of the shrunken house using cardboard to hold the solenoids in place.
+                A video of our first prototype is shown in Figure 4. We then went on to create an engineering drawing of The 
+                Shrunken House to help further convey the scalability and future prospects of the design, which is shown in 
+                Figure 5.
+            </p>
+            <div class="row">
+                <div class="column">
+                    <video width="400" height="400" controls>
+                        <source src="solenoid.mov" type="video/mp4">
+                    </video>
+                    <p style="text-align: center;">Figure 3: Video of the Solenoid Being Controlled</p>
+                </div>
+
+                <div class="column">
+                    <video width="400" height="400" controls >
+                        <source src="solenoids_box.mov" type="video/mp4">
+                    </video>
+                    <p style="text-align: center;">Figure 4: Video of First Prototype of the Shrunken House</p>
+                </div>
+                <div class="column">
+                    <img src="Shrunken House Engineering Sketch-1.png" class="center">
+                    <p style="text-align: center;">Figure 5: Shrunken House Engineering Sketch</p>
+
+                </div>
+              </div>            
+    </body>
+</html>
